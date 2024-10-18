@@ -42,10 +42,10 @@ const RegisterForm = () => {
 
     return (
         <div>
-            <form className="max-w-[400px] mx-auto drop-shadow-sm border p-[20px] rounded-[15px] shadow-sm" onSubmit={formik.handleSubmit}>
+            <form className="max-w-full mx-auto drop-shadow-sm p-[20px] rounded-[15px]" onSubmit={formik.handleSubmit}>
                 <div>{message ? <p className="font-[700] capitalize">"{message}"</p> : ""}</div>
-                <div className="flex items-start gap-5 mt-[15px]">
-                    <div>
+                <div className="flex items-start gap-5 mt-[15px] w-full">
+                    <div className="w-full">
                         <div className="flex flex-col gap-[5px]">
                             <label className="font-[500]">First Name</label>
                             <input type="text" className="border p-[5px] w-full" value={formik.values.fname} placeholder="First Name" onChange={formik.handleChange} name="fname" onBlur={formik.handleBlur} />
@@ -53,7 +53,7 @@ const RegisterForm = () => {
                         {formik.errors.fname && <p className="text-red-600">{formik.errors.fname}</p>}
                     </div>
 
-                    <div>
+                    <div className="w-full">
                         <div className="flex flex-col gap-[5px]">
                             <label className="font-[500]">Last Name</label>
                             <input type="text" className="border p-[5px] w-full" value={formik.values.lname} name="lname" placeholder="Last Name" onChange={formik.handleChange} onBlur={formik.handleBlur} />

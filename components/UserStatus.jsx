@@ -4,6 +4,8 @@ import { loginUser } from "@/lib/actions/auth/authActions"
 import { useAppDispatch, useAppSelector } from "@/lib/hooks"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { HiUser } from "react-icons/hi";
+import { RiLogoutBoxLine } from "react-icons/ri";
 
 const UserStatus = () => {
     const [value, setValue] = useState("")
@@ -35,10 +37,10 @@ const UserStatus = () => {
         <div className="text-[18px] font-medium">
             {
                 value && form !== null ? (<>
-                    <div className="flex gap-[15px] items-center">
+                    <div className="flex gap-[25px] items-center">
 
-                        <div className="font-[500]">Hello, {user?.fname}</div>
-                        <div className="cursor-pointer" onClick={() => removeToken()}>Logout</div>
+                        <div className="font-[400] flex items-center gap-[7.5px] leading-tight text-[16px] capitalize"><HiUser className="h-[22px] w-[22px]" /> Hello, {user?.fname}</div>
+                        <div className="cursor-pointer flex items-center gap-[7.5px] text-[16px]" onClick={() => removeToken()}><RiLogoutBoxLine className="h-[22px] w-[22px]" />Logout</div>
                     </div>
                 </>) : (<>
                     <Link href="/login">Login</Link>

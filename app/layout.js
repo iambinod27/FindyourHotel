@@ -2,20 +2,15 @@ import localFont from "next/font/local";
 import "./globals.css";
 import StoreProvider from "@/components/StoreProvider";
 import Nav from "@/components/nav";
-import BigSpinner from "@/components/BigSpinner";
 import AuthProvider from "@/components/AuthProvider";
 
+import { Roboto } from 'next/font/google';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const roboto = Roboto({
+  weight: ['400', '500', '300', '700'],
+  subsets: ['latin']
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata = {
   title: "FindMyHOtel",
@@ -27,13 +22,13 @@ export default function RootLayout({ children }) {
 
   return (
     <StoreProvider>
-      <html lang="en">
+      <html lang="en" className={roboto.className}>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`antialiased`}
         >
           <AuthProvider>
             <Nav />
-            <div className="pt-[80px]">
+            <div>
               {/* <BigSpinner /> */}
               {children}
             </div>

@@ -41,7 +41,7 @@ const LoginForm = () => {
 
     return (
         <>
-            <form className="max-w-[400px] mx-auto drop-shadow-sm border p-[20px] rounded-[15px] shadow-sm" onSubmit={formik.handleSubmit}>
+            <form className="max-w-[400px] mx-auto drop-shadow-sm p-[20px] rounded-[15px]" onSubmit={formik.handleSubmit}>
                 <p className="text-red-600">{message ? <>{message}</> : ""}</p>
                 <div className="flex flex-col gap-[5px]">
                     <label className="font-[500]">Email</label>

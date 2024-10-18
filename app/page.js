@@ -1,7 +1,13 @@
+import MainV from "@/components/MainV";
 
 export default function Home() {
 
   return (
-    <h1>hello</h1>
+    <>
+      <MainV />
+      <div className="container mx-auto py-[80px]">
+        Cards
+      </div>
+    </>
   );
 }
