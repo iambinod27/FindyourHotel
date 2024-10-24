@@ -7,7 +7,7 @@ const MainV = () => {
         <>
             <main>
                 <div className="relative max-w-full">
-                    <Image src={"https://images.pexels.com/photos/106108/pexels-photo-106108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} unoptimized width={1000} height={500} className="w-full h-full object-cover " />
+                    <Image src={"https://images.pexels.com/photos/106108/pexels-photo-106108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} unoptimized width={1000} height={500} className="w-full h-full object-cover " alt="make your stay like home" />
                     <div className="absolute bg-gradient-to-b from-[#1ce18f] to-blue-400 w-full h-full top-0 opacity-50">
 
                     </div>

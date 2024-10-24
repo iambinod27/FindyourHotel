@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 import BigSpinner from "./BigSpinner";
 
 const AuthProvider = ({ children }) => {
-    const [query, setQuery] = useState("");
     const [isLoading, setLoading] = useState(true)
     const router = useRouter();
     const pathname = usePathname();

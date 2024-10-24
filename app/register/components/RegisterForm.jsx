@@ -1,6 +1,5 @@
 "use client"
 
-import MessageBox from "@/components/MessageBox";
 import Spinner from "@/components/Spinner";
 import { createUser } from "@/lib/actions/auth/authActions";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
@@ -43,7 +42,7 @@ const RegisterForm = () => {
     return (
         <div>
             <form className="max-w-full mx-auto drop-shadow-sm p-[20px] rounded-[15px]" onSubmit={formik.handleSubmit}>
-                <div>{message ? <p className="font-[700] capitalize">"{message}"</p> : ""}</div>
+                <div>{message ? <p className="font-[400] text-[16px] rounded-md capitalize w-full bg-[#81e9bd] text-[#333] p-[10px]">{message}</p> : ""}</div>
                 <div className="flex items-start gap-5 mt-[15px] w-full">
                     <div className="w-full">
                         <div className="flex flex-col gap-[5px]">

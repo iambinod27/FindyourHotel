@@ -15,7 +15,7 @@ const UserStatus = () => {
 
     function removeToken() {
         window.localStorage.removeItem("token")
-        window.location.href = "/"
+        window.location.reload();
     }
 
     useEffect(() => {

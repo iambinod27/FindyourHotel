@@ -1,16 +1,16 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import StoreProvider from "@/components/StoreProvider";
 import Nav from "@/components/nav";
 import AuthProvider from "@/components/AuthProvider";
 
-import { Roboto } from 'next/font/google';
+import { Montserrat, Roboto } from 'next/font/google';
+import Footer from "@/components/Footer";
 
-const roboto = Roboto({
-  weight: ['400', '500', '300', '700'],
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ['latin']
-});
-
+}
+)
 
 export const metadata = {
   title: "FindMyHOtel",
@@ -22,16 +22,17 @@ export default function RootLayout({ children }) {
 
   return (
     <StoreProvider>
-      <html lang="en" className={roboto.className}>
+      <html lang="en">
         <body
-          className={`antialiased`}
+          className={`antialiased ${montserrat.className}`}
         >
           <AuthProvider>
             <Nav />
-            <div>
+            <div className="pt-[80px] min-h-screen">
               {/* <BigSpinner /> */}
               {children}
             </div>
+            <Footer />
           </AuthProvider>
         </body>
       </html>
